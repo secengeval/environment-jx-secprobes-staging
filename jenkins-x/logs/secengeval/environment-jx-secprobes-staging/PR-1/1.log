@@ -1,0 +1,50 @@
+Step: step-credential-initializer-c7kfl:
+
+{"level":"warn","ts":1566402378.1608098,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566402378.1616373,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-wnhmr:
+
+{"level":"warn","ts":1566402381.0113852,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1566402381.0131924,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-secengeval-environment-jx-j59w9:
+
+{"level":"warn","ts":1566402400.0624263,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566402401.1948798,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/secengeval/environment-************-staging.git @ 708bfa4dbdee5af08c6e2f15e92adfb736472798 in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:708bfa4dbdee5af08c6e2f15e92adfb736472798,1:1602e850a2027c4925800b6d415b18b9948360cf","time":"2019-08-21T15:46:41Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 1602e850a2027c4925800b6d415b18b9948360cf: 708bfa4dbdee5af08c6e2f15e92adfb736472798: in ","time":"2019-08-21T15:46:42Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-21T15:46:42Z"}
+{"level":"debug","msg":"ran git reset --hard 708bfa4dbdee5af08c6e2f15e92adfb736472798 in ","time":"2019-08-21T15:46:42Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-21T15:46:42Z"}
+{"level":"debug","msg":"ran git merge 1602e850a2027c4925800b6d415b18b9948360cf in ","time":"2019-08-21T15:46:42Z"}
+MERGED SHA SUBJECT
+1602e850a  set ingress domain
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin 1602e850a2027c4925800b6d415b18b9948360cf: 708bfa4dbdee5af08c6e2f15e92adfb736472798: in ","time":"2019-08-21T15:46:44Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-21T15:46:44Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-21T15:46:44Z"}
+{"level":"debug","msg":"ran git reset --hard 708bfa4dbdee5af08c6e2f15e92adfb736472798 in ","time":"2019-08-21T15:46:44Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-21T15:46:44Z"}
+{"level":"debug","msg":"ran git merge 1602e850a2027c4925800b6d415b18b9948360cf in ","time":"2019-08-21T15:46:44Z"}
+MERGED SHA SUBJECT
+1602e850a  set ingress domain
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-21T15:46:45Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions","time":"2019-08-21T15:46:45Z"}
+{"level":"info","msg":"selected pack: /builder/home/.jx/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-21T15:46:48Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-21T15:46:50Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for secengeval-environment-************-staging-PR-1-1","time":"2019-08-21T15:46:51Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-21T15:46:51Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-21T15:46:51Z"}
+{"level":"info","msg":"upserted PipelineResource secengeval-environment-jx-secpr for the git repository https://github.com/secengeval/environment-************-staging.git and branch PR-1","time":"2019-08-21T15:46:51Z"}
+{"level":"info","msg":"upserted Task secengeval-environment-jx-secpr-from-build-pack-1","time":"2019-08-21T15:46:51Z"}
+{"level":"info","msg":"upserted Pipeline secengeval-environment-jx-secpr-1","time":"2019-08-21T15:46:51Z"}
+{"level":"info","msg":"created PipelineRun secengeval-environment-jx-secpr-1","time":"2019-08-21T15:46:51Z"}
+{"level":"info","msg":"created PipelineStructure secengeval-environment-jx-secpr-1","time":"2019-08-21T15:46:51Z"}
