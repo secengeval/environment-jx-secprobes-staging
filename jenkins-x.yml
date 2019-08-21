@@ -1,0 +1,10 @@
+env:
+- name: DEPLOY_NAMESPACE
+  value: jx-secprobes-staging
+pipelineConfig:
+  env:
+  - name: DEPLOY_NAMESPACE
+    value: jx-secprobes-staging
+  - name: CHART_REPOSITORY
+    value: http://chartmuseum.jx-secprobes.51.105.58.79.nip.io
+  pipelines: {}
